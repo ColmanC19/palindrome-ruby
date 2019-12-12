@@ -2,12 +2,12 @@ require('rspec')
 require('palindrome')
 
 describe('#palindrome') do
-  it('returns false if word is not a palindrome') do
+  it('returns 0 if no palindromes') do
     new_word = Word.new()
-    expect(new_word.palindrome_check('earth')).to(eq(false))
+    expect(new_word.palindrome_check('earth')).to(eq(0))
   end
-  it('returns true if word is a palindrome') do
+  it('returns 1 if 1 palindrome') do
     new_word = Word.new()
-    expect(new_word.palindrome_check('racecar')).to(eq(true))
+    expect(new_word.palindrome_check('racecar')).to(eq(1))
   end
 end
